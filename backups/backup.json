@@ -1,0 +1,261 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "فاخر الكافي",
+      "address": "85820 مَمَر القلشاني",
+      "phone_number": "225-174-8501 x528",
+      "shop_name": "العلايمي Inc",
+      "debt_balance": 5185.71,
+      "created_at": "2024-01-09T14:14:52.693Z",
+      "updated_at": "2024-07-30T11:42:26.418Z",
+      "deleted_at": null
+    },
+    {
+      "id": 2,
+      "name": "إسلام الوحيشي",
+      "address": "6779 ساحة يحيى",
+      "phone_number": "1-131-284-7232 x9938",
+      "shop_name": "العلايمي Inc",
+      "debt_balance": 4175.13,
+      "created_at": "2024-07-01T09:17:58.634Z",
+      "updated_at": "2024-07-29T14:57:08.416Z",
+      "deleted_at": null
+    },
+    {
+      "id": 3,
+      "name": "عطالله فاطمه",
+      "address": "455 درب، طريق سمير",
+      "phone_number": "267-373-2030",
+      "shop_name": "الغربي Inc",
+      "debt_balance": 618.85,
+      "created_at": "2023-08-11T15:48:53.358Z",
+      "updated_at": "2024-07-29T15:29:01.992Z",
+      "deleted_at": null
+    },
+    {
+      "id": 4,
+      "name": "سيد حلمي الدرقاش",
+      "address": "72994 سبيل الع لويني",
+      "phone_number": "(889) 554-5708",
+      "shop_name": "جابالله, هذيل and همدان",
+      "debt_balance": 409.48,
+      "created_at": "2023-11-08T08:07:54.316Z",
+      "updated_at": "2024-07-30T06:55:53.184Z",
+      "deleted_at": null
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "amount": 100,
+      "paid_at": "30-07-2024 16:39",
+      "note": null,
+      "client_id": 1,
+      "sale_id": 1
+    },
+    {
+      "id": 2,
+      "amount": 200,
+      "paid_at": "30-07-2024 17:07",
+      "note": null,
+      "client_id": 2,
+      "sale_id": 2
+    }
+  ],
+  "notes": [],
+  "expenses": [
+    {
+      "id": 1,
+      "total_amount": 20,
+      "reason": "دفع مبلغ مع عملية شراء دقيق لتسديد ديون",
+      "notes": null,
+      "created_at": "30-07-2024 16:39",
+      "sale_id": 1,
+      "deleted_at": null
+    },
+    {
+      "id": 2,
+      "total_amount": 10,
+      "reason": "دفع مبلغ مع عملية شراء دقيق لتسديد ديون",
+      "notes": null,
+      "created_at": "30-07-2024 17:07",
+      "sale_id": 2,
+      "deleted_at": null
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "total_charge": 4800,
+      "notes": null,
+      "created_at": "30-07-2024 16:39",
+      "previous_client_debt": 485.71,
+      "new_client_debt": 5185.71,
+      "client_id": 1
+    },
+    {
+      "id": 2,
+      "total_charge": 3900,
+      "notes": null,
+      "created_at": "30-07-2024 17:07",
+      "previous_client_debt": 475.13,
+      "new_client_debt": 4175.13,
+      "client_id": 2
+    }
+  ],
+  "storage_outs": [
+    {
+      "id": 1,
+      "quantity": 40,
+      "client_price": 120,
+      "total_client_charge": 4800,
+      "client_id": 1,
+      "sale_id": 1,
+      "flour_id": 1,
+      "storage_in_id": 1,
+      "created_at": "30-07-2024 16:39",
+      "income_id": null
+    },
+    {
+      "id": 2,
+      "quantity": 30,
+      "client_price": 130,
+      "total_client_charge": 3900,
+      "client_id": 2,
+      "sale_id": 2,
+      "flour_id": 2,
+      "storage_in_id": 2,
+      "created_at": "30-07-2024 17:07",
+      "income_id": null
+    }
+  ],
+  "storage_ins": [
+    {
+      "id": 1,
+      "flour_id": 1,
+      "stock": 100,
+      "unit_purchase_price": 100,
+      "total_purchase_price": 10000,
+      "created_at": "30-07-2024 16:34"
+    },
+    {
+      "id": 2,
+      "flour_id": 2,
+      "stock": 100,
+      "unit_purchase_price": 100,
+      "total_purchase_price": 10000,
+      "created_at": "30-07-2024 16:34"
+    },
+    {
+      "id": 3,
+      "flour_id": 3,
+      "stock": 100,
+      "unit_purchase_price": 100,
+      "total_purchase_price": 10000,
+      "created_at": "30-07-2024 16:34"
+    },
+    {
+      "id": 4,
+      "flour_id": 4,
+      "stock": 100,
+      "unit_purchase_price": 100,
+      "total_purchase_price": 10000,
+      "created_at": "30-07-2024 16:34"
+    }
+  ],
+  "flour_packages": [
+    {
+      "id": 1,
+      "stock": 60,
+      "package_number": 2147483647,
+      "flour_id": 1,
+      "unit_purchase_price": 100,
+      "created_at": "30-07-2024 16:34",
+      "storage_in_id": 1
+    },
+    {
+      "id": 2,
+      "stock": 70,
+      "package_number": 2147483647,
+      "flour_id": 2,
+      "unit_purchase_price": 100,
+      "created_at": "30-07-2024 16:34",
+      "storage_in_id": 2
+    },
+    {
+      "id": 3,
+      "stock": 100,
+      "package_number": 2147483647,
+      "flour_id": 3,
+      "unit_purchase_price": 100,
+      "created_at": "30-07-2024 16:34",
+      "storage_in_id": 3
+    },
+    {
+      "id": 4,
+      "stock": 100,
+      "package_number": 2147483647,
+      "flour_id": 4,
+      "unit_purchase_price": 100,
+      "created_at": "30-07-2024 16:34",
+      "storage_in_id": 4
+    }
+  ],
+  "flours": [
+    {
+      "id": 1,
+      "name": "درجة أولي",
+      "stock": 60
+    },
+    {
+      "id": 2,
+      "name": "درجة ثانية",
+      "stock": 70
+    },
+    {
+      "id": 3,
+      "name": "درجة ثالثة",
+      "stock": 100
+    },
+    {
+      "id": 4,
+      "name": "درجة رابعة",
+      "stock": 100
+    }
+  ],
+  "incomes": [
+    {
+      "id": 1,
+      "sale_id": 1,
+      "flour_id": 1,
+      "created_at": "30-07-2024 16:39",
+      "profit": 800
+    },
+    {
+      "id": 2,
+      "sale_id": 2,
+      "flour_id": 2,
+      "created_at": "30-07-2024 17:07",
+      "profit": 900
+    }
+  ],
+  "managers": [
+    {
+      "id": 1,
+      "name": "احمد طارق",
+      "username": "ahmed",
+      "password": "$2b$10$o3TCt4csE.SqHyl0IyS.ZOvohquftfgXrWjYqfbtnLtwlno91YI8m",
+      "linked_email": "alitarek99944@gmail.com",
+      "created_at": "30-07-2024 16:31"
+    },
+    {
+      "id": 2,
+      "name": "طارق محمد",
+      "username": "tarek",
+      "password": "$2b$10$KPupK.P3wMtZPE4Y0a7P/.DjZNTQs4EPURguyw4K6IKy8LThDsX7C",
+      "linked_email": "alitarek99944@gmail.com",
+      "created_at": "30-07-2024 16:31"
+    }
+  ]
+}
