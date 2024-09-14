@@ -37,6 +37,7 @@ import StorageInRoute from './routes/storage_in_route.js'
 import StorageOutRoute from './routes/storage_out_route.js'
 import BackupRoute from './routes/backup_route.js'
 import StatisticsRoute from './routes/statistics_route.js'
+import ReportRoute from './routes/report_route.js'
 
 app.use(
     '/api',
@@ -55,7 +56,8 @@ app.use(
     StorageInRoute,
     StorageOutRoute,
     BackupRoute,
-    StatisticsRoute
+    StatisticsRoute,
+    ReportRoute
 )
 
 app.use(ErrorHandlerMiddleware)

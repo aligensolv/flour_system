@@ -166,3 +166,11 @@ model Manager {
   linked_email String
   created_at String
 }
+
+model Report {
+  id Int @id @default(autoincrement())
+  report_name String
+  report_month String
+  report_file String
+  created_at String
+}

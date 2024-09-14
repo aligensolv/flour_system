@@ -56,10 +56,12 @@ class StorageInRepository {
                         flour_package: {
                             create: {
                                 stock: +stock,
-                                package_number: +Randomstring.generate({
-                                    length: 12,
-                                    charset: "numeric"
-                                }),
+                                package_number: parseInt(
+                                    Randomstring.generate({
+                                        length: 9,
+                                        charset: "numeric"
+                                    }), 10
+                                ),
                                 flour_id: +flour_id,
                                 unit_purchase_price: +unit_purchase_price,
                                 created_at: DateTimeRepository.getCurrentDate()
@@ -82,6 +84,23 @@ class StorageInRepository {
                     storage_in_id: createdStorageIn,
                     flour: updatedFlour
                 })
+            }
+        )
+    )
+
+    static updateStorageIn = async ({ id, stock, unit_purchase_price }) => new Promise(
+        promiseAsyncWrapper(
+            async (resolve, reject) => {
+                const updatedStorageIn = await this.prisma.storageIn.update({
+                    where: {
+                        id: +id
+                    },
+                    data: {
+                        stock: +stock,
+                        unit_purchase_price: +unit_purchase_price
+                    }
+                })
+                return resolve(updatedStorageIn)
             }
         )
     )

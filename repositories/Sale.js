@@ -4,6 +4,7 @@ import { getTotalOutPrice } from "../utils/calculator.js"
 import PrismaClientService from "../utils/prisma_client.js"
 import DateTimeRepository from "./Date.js"
 import SaleHelperRepository from "./SaleHelper.js"
+import logger from "../utils/logger.js"
 
 class SaleRepository {
     static prisma = PrismaClientService.instance
@@ -58,16 +59,30 @@ class SaleRepository {
                         client_id: +client_id
                     },
                     include: {
+                        client: true,
                         expense: true,
+                        income: {
+                            include: {
+                                flour: true
+                            }
+                        },
+                        payment: {
+                            include: {
+                                client: true
+                            }
+                        },
                         storage_outs: {
                             include: {
                                 flour: true,
                                 client: true,
-                                sale: true,
-                                storage_in: true,
+                                sale: false,
+                                storage_in: {
+                                    include: {
+                                        flour: true
+                                    }
+                                }
                             }
-                        },
-                        payment: true
+                        }
                     }
                 })
                 return resolve(sales)
@@ -78,6 +93,8 @@ class SaleRepository {
     static createSale = async ({ items, notes, client_id, expense_amount, client_payment_amount }) => new Promise(
         promiseAsyncWrapper(
             async (resolve, reject) => {
+
+                console.log({ items, notes, client_id, expense_amount, client_payment_amount })
 
                 await SaleHelperRepository.validateFlourSufficiency(items)
                 const {storage_outs, total_charge} = await SaleHelperRepository.convertItemsIntoStorageOuts({
@@ -110,14 +127,14 @@ class SaleRepository {
                                 reason: "دفع مبلغ مع عملية شراء دقيق لتسديد ديون",
                                 created_at: DateTimeRepository.getCurrentDate(),
                             }
-                        } : null,
+                        } : undefined,
                         payment: client_payment_amount != null && client_payment_amount > 0 ? {
                             create: {
                                 amount: client_payment_amount,
                                 client_id: +client_id,
                                 paid_at: DateTimeRepository.getCurrentDate(),
                             }
-                        } : null,
+                        } : undefined,
                         income: {
                             create: incomes
                         }

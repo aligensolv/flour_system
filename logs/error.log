@@ -2186,3 +2186,663 @@ Invalid `prisma.expense.findMany()` invocation:
 Can't reach database server at `localhost:3306`
 
 Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-07-30 16:21:22"}
+[31merror[39m: Unexpected number in JSON at position 1 {"timestamp":"2024-08-03 04:57:26"}
+[31merror[39m: Unexpected number in JSON at position 1 {"timestamp":"2024-08-03 04:57:26"}
+[31merror[39m: Unexpected number in JSON at position 2 {"timestamp":"2024-08-03 04:57:49"}
+[31merror[39m: Unexpected number in JSON at position 2 {"timestamp":"2024-08-03 04:57:49"}
+[31merror[39m: 
+Invalid `prisma.storageIn.update()` invocation:
+
+{
+  where: {
+    id: "2"
+        ~~~
+  },
+  data: {
+    stock: 200,
+    unit_purchase_price: 100
+  }
+}
+
+Argument `id`: Invalid value provided. Expected Int, provided String. {"timestamp":"2024-08-20 04:13:50"}
+[31merror[39m: 
+Invalid `prisma.storageIn.update()` invocation:
+
+{
+  where: {
+    id: "2"
+        ~~~
+  },
+  data: {
+    stock: 200,
+    unit_purchase_price: 100
+  }
+}
+
+Argument `id`: Invalid value provided. Expected Int, provided String. {"timestamp":"2024-08-20 04:13:50"}
+[31merror[39m: Cannot destructure property 'month' of 'undefined' as it is undefined. {"timestamp":"2024-08-20 05:46:44"}
+[31merror[39m: Cannot destructure property 'month' of 'undefined' as it is undefined. {"timestamp":"2024-08-20 05:46:44"}
+[31merror[39m: user is not defined {"timestamp":"2024-08-20 05:58:01"}
+[31merror[39m: user is not defined {"timestamp":"2024-08-20 05:58:01"}
+[31merror[39m: DateTimeRepository is not defined {"timestamp":"2024-08-20 05:58:16"}
+[31merror[39m: DateTimeRepository is not defined {"timestamp":"2024-08-20 05:58:16"}
+[31merror[39m: 
+Invalid `prisma.client.update()` invocation:
+
+{
+  where: {
+    id: 1
+  },
+  data: {
+    balance: {
+    ~~~~~~~
+      increment: 200
+    },
+?   name?: String | StringFieldUpdateOperationsInput,
+?   address?: String | StringFieldUpdateOperationsInput,
+?   phone_number?: String | StringFieldUpdateOperationsInput,
+?   shop_name?: String | StringFieldUpdateOperationsInput,
+?   debt_balance?: Float | FloatFieldUpdateOperationsInput,
+?   created_at?: String | StringFieldUpdateOperationsInput,
+?   updated_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   deleted_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   payments?: PaymentUpdateManyWithoutClientNestedInput,
+?   purchases?: StorageOutUpdateManyWithoutClientNestedInput,
+?   sales?: SaleUpdateManyWithoutClientNestedInput
+  }
+}
+
+Unknown argument `balance`. Available options are marked with ?. {"timestamp":"2024-08-30 12:36:41"}
+[31merror[39m: 
+Invalid `prisma.client.update()` invocation:
+
+{
+  where: {
+    id: 1
+  },
+  data: {
+    balance: {
+    ~~~~~~~
+      increment: 200
+    },
+?   name?: String | StringFieldUpdateOperationsInput,
+?   address?: String | StringFieldUpdateOperationsInput,
+?   phone_number?: String | StringFieldUpdateOperationsInput,
+?   shop_name?: String | StringFieldUpdateOperationsInput,
+?   debt_balance?: Float | FloatFieldUpdateOperationsInput,
+?   created_at?: String | StringFieldUpdateOperationsInput,
+?   updated_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   deleted_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   payments?: PaymentUpdateManyWithoutClientNestedInput,
+?   purchases?: StorageOutUpdateManyWithoutClientNestedInput,
+?   sales?: SaleUpdateManyWithoutClientNestedInput
+  }
+}
+
+Unknown argument `balance`. Available options are marked with ?. {"timestamp":"2024-08-30 12:36:41"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 50,
+          total_client_charge: 500,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:24"
+        }
+      ]
+    },
+    notes: null,
+    client_id: 1,
+    created_at: "30-08-2024 14:24",
+    total_charge: 500,
+    previous_client_debt: 220,
+    new_client_debt: 720,
+    expense: null,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 300,
+          created_at: "30-08-2024 14:24"
+        }
+      ]
+    },
++   client: {
++     create: ClientCreateWithoutSalesInput | ClientUncheckedCreateWithoutSalesInput,
++     connectOrCreate: ClientCreateOrConnectWithoutSalesInput,
++     connect: ClientWhereUniqueInput
++   }
+  }
+}
+
+Argument `client` is missing. {"timestamp":"2024-08-30 14:24:48"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 50,
+          total_client_charge: 500,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:24"
+        }
+      ]
+    },
+    notes: null,
+    client_id: 1,
+    created_at: "30-08-2024 14:24",
+    total_charge: 500,
+    previous_client_debt: 220,
+    new_client_debt: 720,
+    expense: null,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 300,
+          created_at: "30-08-2024 14:24"
+        }
+      ]
+    },
++   client: {
++     create: ClientCreateWithoutSalesInput | ClientUncheckedCreateWithoutSalesInput,
++     connectOrCreate: ClientCreateOrConnectWithoutSalesInput,
++     connect: ClientWhereUniqueInput
++   }
+  }
+}
+
+Argument `client` is missing. {"timestamp":"2024-08-30 14:24:48"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 50,
+          total_client_charge: 500,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:30"
+        }
+      ]
+    },
+    notes: null,
+    client_id: 1,
+    created_at: "30-08-2024 14:30",
+    total_charge: 500,
+    previous_client_debt: 220,
+    new_client_debt: 720,
+    expense: null,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 300,
+          created_at: "30-08-2024 14:30"
+        }
+      ]
+    },
++   client: {
++     create: ClientCreateWithoutSalesInput | ClientUncheckedCreateWithoutSalesInput,
++     connectOrCreate: ClientCreateOrConnectWithoutSalesInput,
++     connect: ClientWhereUniqueInput
++   }
+  }
+}
+
+Argument `client` is missing. {"timestamp":"2024-08-30 14:30:06"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 50,
+          total_client_charge: 500,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:30"
+        }
+      ]
+    },
+    notes: null,
+    client_id: 1,
+    created_at: "30-08-2024 14:30",
+    total_charge: 500,
+    previous_client_debt: 220,
+    new_client_debt: 720,
+    expense: null,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 300,
+          created_at: "30-08-2024 14:30"
+        }
+      ]
+    },
++   client: {
++     create: ClientCreateWithoutSalesInput | ClientUncheckedCreateWithoutSalesInput,
++     connectOrCreate: ClientCreateOrConnectWithoutSalesInput,
++     connect: ClientWhereUniqueInput
++   }
+  }
+}
+
+Argument `client` is missing. {"timestamp":"2024-08-30 14:30:06"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 50,
+          total_client_charge: 500,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:30"
+        }
+      ]
+    },
+    notes: null,
+    client_id: 1,
+    created_at: "30-08-2024 14:30",
+    total_charge: 500,
+    previous_client_debt: 220,
+    new_client_debt: 720,
+    expense: null,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 300,
+          created_at: "30-08-2024 14:30"
+        }
+      ]
+    },
++   client: {
++     create: ClientCreateWithoutSalesInput | ClientUncheckedCreateWithoutSalesInput,
++     connectOrCreate: ClientCreateOrConnectWithoutSalesInput,
++     connect: ClientWhereUniqueInput
++   }
+  }
+}
+
+Argument `client` is missing. {"timestamp":"2024-08-30 14:30:33"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 50,
+          total_client_charge: 500,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:30"
+        }
+      ]
+    },
+    notes: null,
+    client_id: 1,
+    created_at: "30-08-2024 14:30",
+    total_charge: 500,
+    previous_client_debt: 220,
+    new_client_debt: 720,
+    expense: null,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 300,
+          created_at: "30-08-2024 14:30"
+        }
+      ]
+    },
++   client: {
++     create: ClientCreateWithoutSalesInput | ClientUncheckedCreateWithoutSalesInput,
++     connectOrCreate: ClientCreateOrConnectWithoutSalesInput,
++     connect: ClientWhereUniqueInput
++   }
+  }
+}
+
+Argument `client` is missing. {"timestamp":"2024-08-30 14:30:33"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 50,
+          total_client_charge: 500,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:31"
+        }
+      ]
+    },
+    notes: null,
+    client_id: 1,
+    ~~~~~~~~~
+    client: {
+      connect: {
+        id: 1
+      }
+    },
+    created_at: "30-08-2024 14:31",
+    total_charge: 500,
+    previous_client_debt: 220,
+    new_client_debt: 720,
+    expense: null,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 300,
+          created_at: "30-08-2024 14:31"
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `client_id`. Did you mean `client`? Available options are marked with ?. {"timestamp":"2024-08-30 14:31:32"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 50,
+          total_client_charge: 500,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:31"
+        }
+      ]
+    },
+    notes: null,
+    client_id: 1,
+    ~~~~~~~~~
+    client: {
+      connect: {
+        id: 1
+      }
+    },
+    created_at: "30-08-2024 14:31",
+    total_charge: 500,
+    previous_client_debt: 220,
+    new_client_debt: 720,
+    expense: null,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 300,
+          created_at: "30-08-2024 14:31"
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `client_id`. Did you mean `client`? Available options are marked with ?. {"timestamp":"2024-08-30 14:31:32"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 50,
+          total_client_charge: 500,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:31"
+        }
+      ]
+    },
+    notes: null,
+    client: {
+      connect: {
+        id: 1
+      }
+    },
+    created_at: "30-08-2024 14:31",
+    total_charge: 500,
+    previous_client_debt: 220,
+    new_client_debt: 720,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 300,
+          created_at: "30-08-2024 14:31"
+        }
+      ]
+    },
++   expense: {
++     create: ExpenseCreateWithoutSaleInput | ExpenseUncheckedCreateWithoutSaleInput,
++     connectOrCreate: ExpenseCreateOrConnectWithoutSaleInput,
++     connect: ExpenseWhereUniqueInput
++   }
+  }
+}
+
+Argument `expense` must not be null. {"timestamp":"2024-08-30 14:31:52"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 50,
+          total_client_charge: 500,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:31"
+        }
+      ]
+    },
+    notes: null,
+    client: {
+      connect: {
+        id: 1
+      }
+    },
+    created_at: "30-08-2024 14:31",
+    total_charge: 500,
+    previous_client_debt: 220,
+    new_client_debt: 720,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 300,
+          created_at: "30-08-2024 14:31"
+        }
+      ]
+    },
++   expense: {
++     create: ExpenseCreateWithoutSaleInput | ExpenseUncheckedCreateWithoutSaleInput,
++     connectOrCreate: ExpenseCreateOrConnectWithoutSaleInput,
++     connect: ExpenseWhereUniqueInput
++   }
+  }
+}
+
+Argument `expense` must not be null. {"timestamp":"2024-08-30 14:31:52"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 20,
+          total_client_charge: 200,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:40"
+        }
+      ]
+    },
+    notes: null,
+    client_id: 1,
+    created_at: "30-08-2024 14:40",
+    total_charge: 200,
+    previous_client_debt: 0,
+    new_client_debt: 200,
+    expense: null,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 100,
+          created_at: "30-08-2024 14:40"
+        }
+      ]
+    },
++   client: {
++     create: ClientCreateWithoutSalesInput | ClientUncheckedCreateWithoutSalesInput,
++     connectOrCreate: ClientCreateOrConnectWithoutSalesInput,
++     connect: ClientWhereUniqueInput
++   }
+  }
+}
+
+Argument `client` is missing. {"timestamp":"2024-08-30 14:40:13"}
+[31merror[39m: 
+Invalid `prisma.sale.create()` invocation:
+
+{
+  data: {
+    storage_outs: {
+      create: [
+        {
+          quantity: 10,
+          client_price: 20,
+          total_client_charge: 200,
+          client_id: 1,
+          flour_id: 1,
+          storage_in_id: 1,
+          created_at: "30-08-2024 14:40"
+        }
+      ]
+    },
+    notes: null,
+    client_id: 1,
+    created_at: "30-08-2024 14:40",
+    total_charge: 200,
+    previous_client_debt: 0,
+    new_client_debt: 200,
+    expense: null,
+    payment: null,
+    income: {
+      create: [
+        {
+          flour_id: 1,
+          profit: 100,
+          created_at: "30-08-2024 14:40"
+        }
+      ]
+    },
++   client: {
++     create: ClientCreateWithoutSalesInput | ClientUncheckedCreateWithoutSalesInput,
++     connectOrCreate: ClientCreateOrConnectWithoutSalesInput,
++     connect: ClientWhereUniqueInput
++   }
+  }
+}
+
+Argument `client` is missing. {"timestamp":"2024-08-30 14:40:13"}
+[31merror[39m: 
+Invalid `prisma.flourPackage.findFirst()` invocation:
+
+
+Inconsistent column data: Conversion failed: Value 773601196094 does not fit in an INT column, try migrating the 'package_number' column type to BIGINT {"timestamp":"2024-09-14 02:21:15"}
+[31merror[39m: 
+Invalid `prisma.flourPackage.findFirst()` invocation:
+
+
+Inconsistent column data: Conversion failed: Value 773601196094 does not fit in an INT column, try migrating the 'package_number' column type to BIGINT {"timestamp":"2024-09-14 02:21:15"}
+[31merror[39m: Do not know how to serialize a BigInt {"timestamp":"2024-09-14 02:36:31"}
+[31merror[39m: Do not know how to serialize a BigInt {"timestamp":"2024-09-14 02:36:31"}
+[31merror[39m: Do not know how to serialize a BigInt {"timestamp":"2024-09-14 02:38:46"}
+[31merror[39m: Do not know how to serialize a BigInt {"timestamp":"2024-09-14 02:38:46"}
+[31merror[39m: Do not know how to serialize a BigInt {"timestamp":"2024-09-14 02:39:02"}
+[31merror[39m: Do not know how to serialize a BigInt {"timestamp":"2024-09-14 02:39:02"}
+[31merror[39m: Do not know how to serialize a BigInt {"timestamp":"2024-09-14 02:39:26"}
+[31merror[39m: Do not know how to serialize a BigInt {"timestamp":"2024-09-14 02:39:26"}
+[31merror[39m: Do not know how to serialize a BigInt {"timestamp":"2024-09-14 02:39:38"}
+[31merror[39m: Do not know how to serialize a BigInt {"timestamp":"2024-09-14 02:39:38"}
+[31merror[39m: 
+Invalid `prisma.storageIn.deleteMany()` invocation:
+
+
+Foreign key constraint failed on the field: `foreign key` {"timestamp":"2024-09-14 03:13:33"}
+[31merror[39m: 
+Invalid `prisma.storageIn.deleteMany()` invocation:
+
+
+Foreign key constraint failed on the field: `foreign key` {"timestamp":"2024-09-14 03:13:33"}

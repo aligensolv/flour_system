@@ -2,6 +2,9 @@ import * as dotenv from 'dotenv'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
 
+import { readFileSync } from 'fs'
+import Handlebars from 'handlebars'
+
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
@@ -22,3 +25,7 @@ export const smtp_user = process.env.SMTP_USER
 export const smtp_pass = process.env.SMTP_PASS
 
 export const static_files_host = process.env.STATIC_FILES_HOST
+
+export const report_template = readFileSync('templates/template.html', 'utf8')
+
+export const compiled_report_template = Handlebars.compile(report_template)

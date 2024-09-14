@@ -9,6 +9,7 @@ class ExpenseRepository {
     static getAllExpenses = async (other_date) => new Promise(
         promiseAsyncWrapper(
             async (resolve, reject) => {
+                console.log(other_date != null);
                 const expenses = await this.prisma.expense.findMany({
                     where: {
                         deleted_at: null,

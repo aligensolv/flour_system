@@ -33,7 +33,10 @@ class BackupRepository {
                     managers
                 }
 
+                
+
                 const jsonData = JSON.stringify(backupData, null, 2);
+                
                 fs.writeFile('backups/backup.json',jsonData, 'utf8', (err) => {
                     
                 });

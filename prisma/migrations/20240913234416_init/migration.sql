@@ -127,6 +127,15 @@ CREATE TABLE "Manager" (
     "created_at" TEXT NOT NULL
 );
 
+-- CreateTable
+CREATE TABLE "Report" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "report_name" TEXT NOT NULL,
+    "report_month" TEXT NOT NULL,
+    "report_file" TEXT NOT NULL,
+    "created_at" TEXT NOT NULL
+);
+
 -- CreateIndex
 CREATE UNIQUE INDEX "Payment_sale_id_key" ON "Payment"("sale_id");
 

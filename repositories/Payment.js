@@ -40,8 +40,8 @@ class PaymentRepository {
                         id: +client_id
                     },
                     data: {
-                        balance: {
-                            increment: amount
+                        debt_balance: {
+                            decrement: amount
                         }
                     }
                 })
@@ -60,8 +60,8 @@ class PaymentRepository {
                     },
                     include: {
                         sale: true,
-                        sale_id: false,
-                        client_id: false
+                        client_id: false,
+                        client: true,
                     }
                 })
                 return resolve(payments)

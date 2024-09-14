@@ -28,3 +28,12 @@ export const createStorageIn = asyncWrapper(
         return res.status(OK).json(createdStorageIn)
     }
 )
+
+export const updateStorageIn = asyncWrapper(
+    async (req, res) => {
+        const { id } = req.params
+        const { stock, unit_purchase_price } = req.body
+        const updatedStorageIn = await StorageInRepository.updateStorageIn({ id, stock, unit_purchase_price })
+        return res.status(OK).json(updatedStorageIn)
+    }
+)

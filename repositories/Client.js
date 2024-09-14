@@ -11,7 +11,7 @@ class ClientRepository {
                 const clients = await ClientRepository.prisma.client.findMany({
                     where: {
                         deleted_at: null
-                    }
+                    },
                 })
                 return resolve(clients)
             }

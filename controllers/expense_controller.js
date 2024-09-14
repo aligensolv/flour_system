@@ -6,6 +6,7 @@ import ValidatorRepository from "../repositories/Validator.js"
 export const getAllExpenses = asyncWrapper(
     async (req, res) => {
         const { custom_date } = req.query
+        
         const expenses = await ExpenseRepository.getAllExpenses(custom_date)
         return res.status(OK).json(expenses)
     }
@@ -15,6 +16,7 @@ export const getAllExpenses = asyncWrapper(
 export const createExpense = asyncWrapper(
     async (req, res) => {
         const { total_amount, notes, reason } = req.body
+        console.log(req.body);
 
         await ValidatorRepository.validateNotNull({
             total_amount,

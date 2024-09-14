@@ -3,6 +3,7 @@ import moment from "moment"
 class DateTimeRepository{
     static date_format = 'DD-MM-YYYY HH:mm'
     static time_format = 'HH:mm'
+    static month_format = 'MM-YYYY'
 
     static getCurrentTime(){
         return moment().format(this.time_format)
@@ -10,6 +11,10 @@ class DateTimeRepository{
 
     static getCurrentDate(){
         return moment().format(this.date_format)
+    }
+
+    static getCurrentMonth(){
+        return moment().format(this.month_format)
     }
 
     static increaseTimeByHours({ current_time, hours }) {
