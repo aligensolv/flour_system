@@ -241,6 +241,7 @@ class ReportHelper {
                         printBackground: true, 
                         format: 'A3' 
                     });
+                    
 
                     await browser.close();
                     logger.info(`Report generated successfully: ${filename}`);
